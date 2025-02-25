@@ -15,5 +15,24 @@ To run the program, use the following command:
 ./calculator.exe
 ```
 The program will prompt you to enter an arithmetic expression. After entering the expression, press `Enter` to see the result.
-## Important restrictions
-[10]
+##Important remarks
+- Input passed through stdin
+- Output passed through stdout
+- Less than 1KiB of input data (else UB )
+- Only allowed charset [0-9()*+\/\s\.-] (else return code not equal to 0 )
+  - 0-9 matches a single character in the range between 0 (index 48) and 9 (index 57) (case sensitive)
+  - ()*+ matches a single character in the list ()*+ (case sensitive)
+  - \/ matches the character / with index ( or ) literally (case sensitive)
+  - \s matches any whitespace character (equivalent to [\r\n\t\f\v ] )
+  - \- matches the character - with index ( or ) literally (case sensitive)
+- Only correct arithmetic expression are allowed (else return code not equal to 0 )
+- All numbers in a given expression are integers from a range (else UB )
+- All intermediate results (for any allowed order of evaluation) are fit into range 
+- Must support flag --float that switch app calculations into real numbers mode
+- In integer mode:
+  - / return an integer part of an division (rounds towards )
+  - Answer must be given on a single line as an integer number (with - sign if negative)
+In real numbers mode:
+  - / return a fraction number
+  - Answer must be given on a single line as a real number (decimal notation) with an absolute accuracy
+In any mode division on a number less than 10^5 are forbidden (else UB )
