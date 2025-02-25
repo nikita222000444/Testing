@@ -15,4 +15,4 @@ To run the program, use the following command:
 ./calculator.exe
 ```
 The program will prompt you to enter an arithmetic expression. After entering the expression, press `Enter` to see the result.
-##Important restrictions
+## Important restrictions
