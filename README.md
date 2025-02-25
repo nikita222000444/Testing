@@ -11,7 +11,7 @@ To build the program, you need a C compiler such as `gcc` or `clang`. Follow the
 1. Open a terminal.
 2. Navigate to the directory containing the source code(`main.c`).
 3. Run the following command to compile the program.
-``
+```
 gcc main.c -o calculator.exe
-``
+```
 This will create an executable file named calculator.exe.
